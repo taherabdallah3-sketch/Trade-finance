@@ -1,4 +1,4 @@
-# SEA Trade website
+# Mutagarat website
 
 A simple, self-contained website: `index.html`, `style.css`, `script.js`.
 No build step, no dependencies to install — it works as plain files.
