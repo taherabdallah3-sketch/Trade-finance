@@ -7,22 +7,39 @@
 <meta name="description" content="SEA Trade helps Egyptian exporters and importers get paid faster and find the right financing for their trade, without the paperwork maze.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+<!-- torn-edge SVG divider, reused between sections. currentColor = the color of
+     the section BELOW the tear, since the tear is filled with that color and
+     sits on top of the section above it. -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <clipPath id="tear" clipPathUnits="objectBoundingBox">
+      <path d="M0,0.3 L0.04,0.55 L0.08,0.15 L0.13,0.6 L0.17,0.35 L0.21,0.7 L0.25,0.2
+               L0.29,0.5 L0.34,0.1 L0.38,0.65 L0.42,0.4 L0.46,0.75 L0.5,0.25
+               L0.54,0.55 L0.58,0.15 L0.63,0.6 L0.67,0.3 L0.71,0.7 L0.75,0.2
+               L0.79,0.5 L0.84,0.1 L0.88,0.65 L0.92,0.35 L0.96,0.6 L1,0.3
+               L1,1 L0,1 Z"/>
+    </clipPath>
+  </defs>
+</svg>
 
 <!-- ============ HEADER ============ -->
 <header class="site-header">
   <div class="wrap header-inner">
     <a href="#top" class="logo">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="34" height="34">
-          <path d="M4 26 L20 8 L36 26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M4 26 C4 33 10 34 20 34 C30 34 36 33 36 26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <span class="stamp-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="40" height="40">
+          <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="2"/>
+          <circle cx="32" cy="32" r="24" fill="none" stroke="currentColor" stroke-width="1"/>
+          <path d="M18 34 L28 22 L34 30 L46 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M40 16 L46 16 L46 22" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </span>
-      <span>SEA TRADE</span>
+      <span class="wordmark">SEA TRADE</span>
     </a>
     <nav class="main-nav" id="main-nav">
       <a href="#how">How it works</a>
@@ -31,7 +48,7 @@
       <a href="#faq">Questions</a>
     </nav>
     <div class="header-cta">
-      <a class="btn btn-ghost" href="https://wa.me/20000000000" target="_blank" rel="noopener">WhatsApp us</a>
+      <a class="btn btn-ghost" href="https://wa.me/20000000000" target="_blank" rel="noopener">WhatsApp</a>
       <a class="btn btn-primary" href="#inquire">Start an inquiry</a>
     </div>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
@@ -44,155 +61,154 @@
 <section class="hero" id="top">
   <div class="wrap hero-inner">
     <div class="hero-copy">
-      <p class="eyebrow">For Egyptian exporters &amp; importers</p>
-      <h1>You shipped the goods.<br>Why wait 90 days to get paid?</h1>
+      <p class="tag-strip">For Egyptian exporters &amp; importers</p>
+      <h1>You shipped the goods.
+        <span class="underline-scribble">Why wait 90 days<svg class="scribble" viewBox="0 0 300 20" preserveAspectRatio="none"><path d="M2,14 C60,4 110,18 150,10 C190,2 240,16 298,8" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg></span>
+        to get paid?</h1>
       <p class="lede">
-        We help you turn an unpaid invoice into cash in your account within days —
-        and if you need financing before you even ship, we find the right partner for that too.
-        No jargon, no runaround, and you always know what happens next.
+        We turn an unpaid invoice into cash in your account within days — and if you need
+        financing before you even ship, we find the right partner for that too. No jargon,
+        no runaround, and you always know what happens next.
       </p>
       <div class="hero-actions">
         <a class="btn btn-primary btn-lg" href="#inquire">Check if you qualify</a>
         <a class="btn btn-text" href="#how">See how it works ↓</a>
       </div>
-      <p class="hero-note">Free to ask. No obligation. Usually takes 5 minutes.</p>
+      <p class="hero-note">✎ Free to ask · No obligation · Usually 5 minutes</p>
     </div>
+
     <div class="hero-art" aria-hidden="true">
-      <svg viewBox="0 0 420 360" width="100%" height="100%">
-        <!-- water -->
-        <path d="M0 300 C 60 280, 120 320, 180 300 C 240 280, 300 320, 360 300 C 390 290, 405 300, 420 295 L420 360 L0 360 Z" fill="var(--sand-deep)"/>
-        <!-- ship hull -->
-        <path d="M60 250 L360 250 L330 300 L90 300 Z" fill="var(--navy)"/>
-        <rect x="110" y="200" width="60" height="50" fill="var(--navy-2)"/>
-        <rect x="185" y="180" width="55" height="70" fill="var(--terracotta)"/>
-        <rect x="250" y="205" width="60" height="45" fill="var(--navy-2)"/>
-        <rect x="120" y="210" width="16" height="16" fill="var(--sand)"/>
-        <rect x="192" y="192" width="16" height="16" fill="var(--sand)"/>
-        <rect x="212" y="192" width="16" height="16" fill="var(--sand)"/>
-        <rect x="260" y="215" width="16" height="16" fill="var(--sand)"/>
-        <!-- crane line -->
-        <path d="M330 250 L330 130 L250 130" fill="none" stroke="var(--ink)" stroke-width="3" stroke-linecap="round"/>
-        <!-- coin swap: invoice becomes coin -->
-        <g transform="translate(250,60)">
-          <rect x="-34" y="-30" width="68" height="52" rx="6" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
-          <line x1="-22" y1="-14" x2="22" y2="-14" stroke="var(--ink)" stroke-width="2"/>
-          <line x1="-22" y1="-3" x2="10" y2="-3" stroke="var(--ink)" stroke-width="2"/>
-          <line x1="-22" y1="8" x2="18" y2="8" stroke="var(--ink)" stroke-width="2"/>
-        </g>
-        <g transform="translate(345,60)">
-          <circle r="26" fill="var(--gold)" stroke="var(--ink)" stroke-width="2"/>
-          <text x="0" y="7" text-anchor="middle" font-size="22" font-weight="700" fill="var(--navy)" font-family="Work Sans, sans-serif">$</text>
-        </g>
-        <path d="M292 58 C 305 50, 315 50, 322 58" fill="none" stroke="var(--ink)" stroke-width="2.5" marker-end="url(#arrow)"/>
-        <defs>
-          <marker id="arrow" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
-            <path d="M0,0 L8,4 L0,8 Z" fill="var(--ink)"/>
-          </marker>
-        </defs>
-      </svg>
+      <div class="hero-doc hero-doc-1">
+        <div class="doc-line" style="width:70%"></div>
+        <div class="doc-line" style="width:45%"></div>
+        <div class="doc-line" style="width:58%"></div>
+        <div class="stamp-red">PAID</div>
+      </div>
+      <div class="hero-doc hero-doc-2">
+        <svg viewBox="0 0 200 140" width="100%" height="100%">
+          <path d="M20 90 L70 40 L140 40 L180 90 Z" fill="var(--navy)"/>
+          <rect x="55" y="55" width="18" height="18" fill="var(--sand)"/>
+          <rect x="90" y="50" width="20" height="26" fill="var(--terracotta)"/>
+          <rect x="120" y="58" width="16" height="16" fill="var(--sand)"/>
+          <path d="M20 90 C40 100 160 100 180 90" fill="none" stroke="var(--ink)" stroke-width="2"/>
+        </svg>
+      </div>
+      <div class="hero-coin" aria-hidden="true">$</div>
+    </div>
+  </div>
+  <svg class="tear-divider" viewBox="0 0 1 1" preserveAspectRatio="none"><path d="M0,0.3 L0.04,0.55 L0.08,0.15 L0.13,0.6 L0.17,0.35 L0.21,0.7 L0.25,0.2 L0.29,0.5 L0.34,0.1 L0.38,0.65 L0.42,0.4 L0.46,0.75 L0.5,0.25 L0.54,0.55 L0.58,0.15 L0.63,0.6 L0.67,0.3 L0.71,0.7 L0.75,0.2 L0.79,0.5 L0.84,0.1 L0.88,0.65 L0.92,0.35 L0.96,0.6 L1,0.3 L1,1 L0,1 Z" fill="var(--navy)"/></svg>
+</section>
+
+<!-- ============ THE MANIFEST STRIP (problem/solution as a ticket) ============ -->
+<section class="manifest">
+  <div class="wrap">
+    <div class="ticket">
+      <div class="ticket-item">
+        <span class="ticket-num">90</span>
+        <p>days is the usual wait for a buyer abroad to pay after you ship</p>
+      </div>
+      <div class="ticket-perf" aria-hidden="true"></div>
+      <div class="ticket-item">
+        <span class="ticket-num">~90<small>%</small></span>
+        <p>of your invoice can land in your account within days, instead</p>
+      </div>
+      <div class="ticket-perf" aria-hidden="true"></div>
+      <div class="ticket-item">
+        <span class="ticket-num">0</span>
+        <p>new loans on your books — it's your own money, just early</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ============ PROBLEM / SOLUTION STRIP ============ -->
-<section class="strip">
-  <div class="wrap strip-inner">
-    <div class="strip-item">
-      <span class="strip-num">90</span>
-      <p>days is the usual wait for a buyer abroad to pay after you ship</p>
-    </div>
-    <div class="strip-divider" aria-hidden="true">→</div>
-    <div class="strip-item">
-      <span class="strip-num">~90%</span>
-      <p>of your invoice can land in your account within days of shipping, instead</p>
-    </div>
-    <div class="strip-divider" aria-hidden="true">→</div>
-    <div class="strip-item">
-      <span class="strip-num">0</span>
-      <p>new loans on your books — this isn't debt, it's your own money, early</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ HOW IT WORKS ============ -->
+<!-- ============ HOW IT WORKS — zigzag timeline ============ -->
 <section class="section" id="how">
   <div class="wrap">
     <p class="eyebrow center">How it works</p>
     <h2 class="section-title center">Four steps, start to finish</h2>
-    <p class="section-lede center">
-      We keep this simple on purpose. Here's exactly what happens after you reach out.
-    </p>
+    <p class="section-lede center">We keep this simple on purpose — here's exactly what happens after you reach out.</p>
 
-    <ol class="steps">
-      <li class="step">
-        <div class="step-num">1</div>
-        <h3>Tell us about your shipment</h3>
-        <p>Send us a few basics: what you're shipping, who's buying it, and when it went out (or when it will). Takes about 5 minutes, no paperwork yet.</p>
-      </li>
-      <li class="step">
-        <div class="step-num">2</div>
-        <h3>We check if it works</h3>
-        <p>We look at your buyer, your documents, and your business — free, and with no obligation. If something's missing, we tell you exactly what.</p>
-      </li>
-      <li class="step">
-        <div class="step-num">3</div>
-        <h3>We match you with the right partner</h3>
-        <p>A bank, a specialized financing company, or an international partner — whichever fits your shipment best. We handle the introduction and the paperwork.</p>
-      </li>
-      <li class="step">
-        <div class="step-num">4</div>
-        <h3>You get paid</h3>
-        <p>Once approved, funds move to your account — typically most of your invoice value, well before your buyer's payment would normally arrive.</p>
-      </li>
-    </ol>
+    <div class="route">
+      <svg class="route-line" viewBox="0 0 100 900" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M50,20 C10,150 90,230 50,340 C10,450 90,530 50,640 C10,750 90,800 50,880"
+              fill="none" stroke="var(--border-strong)" stroke-width="2" stroke-dasharray="1 10" stroke-linecap="round"/>
+      </svg>
+
+      <div class="route-step route-step-left">
+        <div class="route-badge">1</div>
+        <div class="route-card">
+          <h3>Tell us about your shipment</h3>
+          <p>Send a few basics: what you're shipping, who's buying it, and when it went out (or will). About 5 minutes, no paperwork yet.</p>
+        </div>
+      </div>
+
+      <div class="route-step route-step-right">
+        <div class="route-badge">2</div>
+        <div class="route-card">
+          <h3>We check if it works</h3>
+          <p>We look at your buyer, your documents, and your business — free, no obligation. If something's missing, we tell you exactly what.</p>
+        </div>
+      </div>
+
+      <div class="route-step route-step-left">
+        <div class="route-badge">3</div>
+        <div class="route-card">
+          <h3>We match you with a partner</h3>
+          <p>A bank, a specialist financier, or an international partner — whichever fits. We handle the introduction and the paperwork.</p>
+        </div>
+      </div>
+
+      <div class="route-step route-step-right">
+        <div class="route-badge">4</div>
+        <div class="route-card route-card-final">
+          <h3>You get paid</h3>
+          <p>Once approved, funds move to your account — typically most of your invoice value, well before your buyer's payment would arrive.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- ============ SERVICES ============ -->
-<section class="section section-alt" id="services">
+<!-- ============ SERVICES — a pile of stamped papers, not a grid ============ -->
+<section class="section section-desk" id="services">
   <div class="wrap">
     <p class="eyebrow center">What we do</p>
     <h2 class="section-title center">Three ways we can help</h2>
-    <p class="section-lede center">
-      Not sure which one fits? Tell us your situation in the form below and we'll point you to the right one.
-    </p>
+    <p class="section-lede center">Not sure which fits? Tell us your situation in the form below and we'll point you to the right one.</p>
 
-    <div class="cards">
-      <div class="card card-featured">
-        <span class="card-tag">Most common</span>
+    <div class="desk">
+      <article class="paper paper-a">
+        <span class="washi" aria-hidden="true"></span>
+        <h3>Ongoing credit for your trade business</h3>
+        <p>You ship regularly and want a standing credit line with a bank or lender, based on your trading history rather than starting from zero each time.</p>
+        <ul class="paper-list">
+          <li>Suited to steady, repeat shipments</li>
+          <li>We prepare your file and make the introduction</li>
+        </ul>
+      </article>
+
+      <article class="paper paper-b paper-featured">
+        <span class="stamp-circle" aria-hidden="true">
+          <svg viewBox="0 0 100 100"><circle cx="50" cy="50" r="46" fill="none" stroke="currentColor" stroke-width="2.5"/><text x="50" y="42" text-anchor="middle" font-size="11" font-family="Space Grotesk, sans-serif" font-weight="700" fill="currentColor">START</text><text x="50" y="60" text-anchor="middle" font-size="11" font-family="Space Grotesk, sans-serif" font-weight="700" fill="currentColor">HERE</text></svg>
+        </span>
         <h3>Already shipped, waiting to get paid</h3>
-        <p class="card-desc">
-          You have a confirmed order and the goods are on their way, but your buyer won't pay for 60–90 days.
-          We arrange for a financing partner to pay you most of that value now, and collect from your buyer later.
-        </p>
-        <ul class="card-list">
+        <p>You have a confirmed order and the goods are on their way, but your buyer won't pay for 60–90 days. We arrange for a financing partner to pay you most of that value now, and collect from your buyer later.</p>
+        <ul class="paper-list">
           <li>Fastest option — no long approval process</li>
-          <li>Not a loan against your company; it's an advance on money you're already owed</li>
+          <li>Not a loan against your company; an advance on money you're already owed</li>
           <li>Best for exporters with a real buyer and shipping documents in hand</li>
         </ul>
-      </div>
-      <div class="card">
-        <h3>Ongoing credit for your trade business</h3>
-        <p class="card-desc">
-          You ship regularly and want a standing credit line with a bank or lender, based on your trading
-          history rather than starting from zero each time.
-        </p>
-        <ul class="card-list">
-          <li>Suited to businesses with steady, repeat shipments</li>
-          <li>We prepare your file and introduce you to the right bank</li>
-        </ul>
-      </div>
-      <div class="card">
+      </article>
+
+      <article class="paper paper-c">
+        <span class="washi" aria-hidden="true"></span>
         <h3>Financing before you ship</h3>
-        <p class="card-desc">
-          You have a confirmed order but need funds to produce or buy the goods first. We help arrange
-          financing against that confirmed order, before anything ships.
-        </p>
-        <ul class="card-list">
+        <p>You have a confirmed order but need funds to produce or buy the goods first. We help arrange financing against that order, before anything ships.</p>
+        <ul class="paper-list">
           <li>Needs a real, confirmed order in hand</li>
           <li>Takes a little longer since production is involved</li>
         </ul>
-      </div>
+      </article>
     </div>
   </div>
 </section>
@@ -204,79 +220,81 @@
       <p class="eyebrow">Why work with us</p>
       <h2 class="section-title">We're not a bank, and we don't pretend to be one</h2>
       <p class="section-lede">
-        SEA Trade doesn't lend money itself. Banks and licensed financiers make the credit decisions and
-        provide the funds — we do the work in between, so you don't have to chase five different offices
-        or fill in the same form twice.
+        SEA Trade doesn't lend money itself. Banks and licensed financiers make the credit
+        decisions and provide the funds — we do the work in between, so you don't have to
+        chase five different offices or fill in the same form twice.
       </p>
       <ul class="trust-list">
         <li>
-          <span class="trust-icon" aria-hidden="true">✓</span>
+          <svg class="check-mark" viewBox="0 0 24 24" width="22" height="22"><path d="M4 13 L9 18 L20 6" fill="none" stroke="var(--terracotta)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div><strong>We speak plainly.</strong> No confusing paperwork explained in confusing language. If a document is needed, we tell you why.</div>
         </li>
         <li>
-          <span class="trust-icon" aria-hidden="true">✓</span>
+          <svg class="check-mark" viewBox="0 0 24 24" width="22" height="22"><path d="M4 13 L9 18 L20 6" fill="none" stroke="var(--terracotta)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div><strong>We tell you the real answer, fast.</strong> If your shipment isn't a fit, we say so early rather than stringing you along.</div>
         </li>
         <li>
-          <span class="trust-icon" aria-hidden="true">✓</span>
+          <svg class="check-mark" viewBox="0 0 24 24" width="22" height="22"><path d="M4 13 L9 18 L20 6" fill="none" stroke="var(--terracotta)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div><strong>Your information stays confidential.</strong> Shared only with the specific bank or financier we're introducing you to.</div>
         </li>
         <li>
-          <span class="trust-icon" aria-hidden="true">✓</span>
+          <svg class="check-mark" viewBox="0 0 24 24" width="22" height="22"><path d="M4 13 L9 18 L20 6" fill="none" stroke="var(--terracotta)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
           <div><strong>No upfront fees to ask.</strong> Checking whether your shipment qualifies costs you nothing.</div>
         </li>
       </ul>
     </div>
     <div class="trust-visual" aria-hidden="true">
-      <svg viewBox="0 0 300 300" width="100%" height="100%">
-        <circle cx="150" cy="150" r="130" fill="var(--sand-deep)"/>
-        <rect x="90" y="110" width="120" height="90" rx="6" fill="var(--paper)" stroke="var(--ink)" stroke-width="2"/>
-        <line x1="105" y1="135" x2="195" y2="135" stroke="var(--ink)" stroke-width="2"/>
-        <line x1="105" y1="150" x2="175" y2="150" stroke="var(--ink)" stroke-width="2"/>
-        <line x1="105" y1="165" x2="185" y2="165" stroke="var(--ink)" stroke-width="2"/>
-        <circle cx="205" cy="95" r="28" fill="var(--terracotta)"/>
-        <path d="M193 95 L202 104 L219 85" fill="none" stroke="var(--paper)" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
+      <div class="seal">
+        <svg viewBox="0 0 220 220" width="100%" height="100%">
+          <path id="sealcircle" d="M110,20 a90,90 0 1,1 -0.1,0" fill="none"/>
+          <circle cx="110" cy="110" r="90" fill="none" stroke="var(--terracotta)" stroke-width="2"/>
+          <circle cx="110" cy="110" r="76" fill="none" stroke="var(--terracotta)" stroke-width="1" stroke-dasharray="2 5"/>
+          <text font-family="Space Grotesk, sans-serif" font-size="12" font-weight="600" fill="var(--terracotta)" letter-spacing="3">
+            <textPath href="#sealcircle" startOffset="2%">VERIFIED · CONFIDENTIAL · NO OBLIGATION ·</textPath>
+          </text>
+          <path d="M80 112 L100 130 L142 88" fill="none" stroke="var(--navy)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- ============ FAQ ============ -->
-<section class="section section-alt" id="faq">
+<section class="section section-desk" id="faq">
   <div class="wrap wrap-narrow">
     <p class="eyebrow center">Common questions</p>
     <h2 class="section-title center">Straight answers, before you ask</h2>
 
     <div class="faq-list">
       <details class="faq-item" open>
-        <summary>How long does the whole process take?</summary>
+        <summary><span>How long does the whole process take?</span><span class="faq-mark">+</span></summary>
         <p>Checking whether your shipment qualifies usually takes a few days. Once matched with a financing
         partner, funds typically arrive within one to two weeks of your documents being complete —
         faster for straightforward cases.</p>
       </details>
       <details class="faq-item">
-        <summary>Do I pay anything upfront?</summary>
+        <summary><span>Do I pay anything upfront?</span><span class="faq-mark">+</span></summary>
         <p>No. There's no cost to ask, and no cost to be assessed. Fees, if any, are agreed clearly before
         you commit to anything, and are usually taken from the financing amount itself — never billed to you separately.</p>
       </details>
       <details class="faq-item">
-        <summary>What documents will I need?</summary>
+        <summary><span>What documents will I need?</span><span class="faq-mark">+</span></summary>
         <p>At minimum: your company registration, the purchase order or sales contract, and shipping
         documents once available. We'll tell you exactly what applies to your case — nothing more.</p>
       </details>
       <details class="faq-item">
-        <summary>Is this a loan? Will it show up as debt?</summary>
+        <summary><span>Is this a loan? Will it show up as debt?</span><span class="faq-mark">+</span></summary>
         <p>For the "already shipped" option, no — it's an advance on money your buyer already owes you,
         not a new loan. The working-capital and pre-shipment options do involve a facility from a bank
         or lender, and we'll always explain clearly which kind applies before you decide anything.</p>
       </details>
       <details class="faq-item">
-        <summary>What kind of businesses do you work with?</summary>
+        <summary><span>What kind of businesses do you work with?</span><span class="faq-mark">+</span></summary>
         <p>Egyptian exporters and importers with a real, verifiable trade — any sector, any size, as long
         as there's a genuine shipment or order behind it.</p>
       </details>
       <details class="faq-item">
-        <summary>Is my information safe with you?</summary>
+        <summary><span>Is my information safe with you?</span><span class="faq-mark">+</span></summary>
         <p>Yes. Your details are only shared with the specific bank or financing partner we introduce you
         to for your transaction, and only once you agree to move forward.</p>
       </details>
@@ -290,8 +308,8 @@
     <p class="eyebrow center">Get started</p>
     <h2 class="section-title center">Tell us about your shipment</h2>
     <p class="section-lede center">
-      Answer a few questions below, or message us directly on WhatsApp if that's easier. We'll get back
-      to you within one business day.
+      Answer a few questions below, or message us directly on WhatsApp if that's easier.
+      We'll get back to you within one business day.
     </p>
 
     <div class="inquire-grid">
@@ -340,13 +358,14 @@
       </form>
 
       <div class="inquire-alt">
+        <div class="perf-top" aria-hidden="true"></div>
         <h3>Prefer to just talk?</h3>
         <p>If forms aren't your thing, message us directly and we'll take it from there.</p>
         <a class="btn btn-whatsapp btn-block" href="https://wa.me/20000000000" target="_blank" rel="noopener">
           <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.87.5 3.62 1.44 5.12L2 22l5.13-1.55a9.9 9.9 0 0 0 4.9 1.28h.01c5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2zm0 18.02h-.01a8.1 8.1 0 0 1-4.13-1.13l-.3-.18-3.05.92.92-2.98-.2-.31a8.07 8.07 0 0 1-1.24-4.32c0-4.47 3.63-8.1 8.1-8.1a8.05 8.05 0 0 1 8.1 8.1c0 4.47-3.63 8-8.19 8zm4.44-6.06c-.24-.12-1.43-.71-1.65-.79-.22-.08-.38-.12-.55.12-.16.24-.63.79-.77.95-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.11-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.55-1.33-.76-1.82-.2-.48-.4-.42-.55-.42h-.47c-.16 0-.42.06-.64.3-.22.24-.85.83-.85 2.02s.87 2.35.99 2.51c.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.56.2-1.04.14-1.15-.06-.1-.22-.16-.46-.28z"/></svg>
           Chat on WhatsApp
         </a>
-        <p class="inquire-alt-note">Or call us at <strong>+20 000 000 0000</strong><br>Sunday–Thursday, 10am–6pm Cairo time</p>
+        <p class="inquire-alt-note">Or call <strong>+20 000 000 0000</strong><br>Sun–Thu, 10am–6pm Cairo time</p>
       </div>
     </div>
   </div>
@@ -356,20 +375,20 @@
 <footer class="site-footer">
   <div class="wrap footer-inner">
     <div class="footer-brand">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="28" height="28">
-          <path d="M4 26 L20 8 L36 26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M4 26 C4 33 10 34 20 34 C30 34 36 33 36 26" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+      <span class="stamp-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" width="30" height="30">
+          <circle cx="32" cy="32" r="29" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M18 34 L28 22 L34 30 L46 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </span>
-      <span>SEA TRADE</span>
+      <span class="wordmark">SEA TRADE</span>
     </div>
     <p class="footer-disclaimer">
       SEA Trade arranges and structures trade-finance transactions between clients and licensed banks
       or financiers. SEA Trade is not a bank and does not itself lend money; all credit decisions are
       made by the financing partner involved in a given transaction.
     </p>
-    <p class="footer-copy">© <span id="year"></span> SEA Trade, part of Investia Capital Group. All rights reserved.</p>
+    <p class="footer-copy">© <span id="year"></span> SEA Trade, part of SEA Capital. All rights reserved.</p>
   </div>
 </footer>
 
